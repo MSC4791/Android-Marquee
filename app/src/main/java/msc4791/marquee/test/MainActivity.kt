@@ -1,4 +1,4 @@
-package personal.msc4791.marquee
+package msc4791.marquee.test
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -8,6 +8,8 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import msc4791.marquee.MarqueeDirection
+import msc4791.marquee.MarqueeText
 
 /*class MainActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

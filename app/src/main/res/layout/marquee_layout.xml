@@ -9,7 +9,7 @@
 
     tools:context=".MainActivity">
 
-    <personal.msc4791.marquee.MarqueeTextView
+    <msc4791.marquee.MarqueeTextView
         android:id="@+id/view_marquee"
 
         android:layout_width="wrap_content"

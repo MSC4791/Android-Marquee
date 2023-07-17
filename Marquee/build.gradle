@@ -1,18 +1,17 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
 }
 
 android {
-    namespace 'msc4791.marquee.test'
+    namespace 'msc4791.marquee'
     compileSdk 33
 
     defaultConfig {
-        applicationId "msc4791.marquee.test"
         minSdk 27
         targetSdk 33
-        versionCode 1
-        versionName "1.0"
+
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -47,6 +46,4 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
     implementation 'com.google.android.material:material:1.9.0'
-
-    implementation project(path: ':marquee')
 }

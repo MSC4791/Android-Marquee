@@ -1,4 +1,4 @@
-package personal.msc4791.marquee
+package msc4791.marquee
 
 import android.content.Context
 import android.graphics.Canvas
@@ -14,7 +14,13 @@ class MarqueeTextView: AppCompatTextView {
             recycle()
         }
     }
-    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
+    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
+        context.obtainStyledAttributes(attrs, R.styleable.MarqueeTextView).run {
+            marqueeDirection = getInteger(R.styleable.MarqueeTextView_marquee_direction, MARQUEE_LEFT)
+            expandToParent = getBoolean(R.styleable.MarqueeTextView_expand_to_parent, false)
+            recycle()
+        }
+    }
 
     private var scrollValue: Float
     var marqueeDirection: Int
